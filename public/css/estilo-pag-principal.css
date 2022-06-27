@@ -1,0 +1,339 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:wght@200;300&display=swap');
+
+	
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	text-decoration: none;
+
+}
+header{
+	position: fixed;
+	background: #000000;
+	padding: 20px;
+	padding-left: 30px;
+	width: 100%;
+	height: 30px;
+
+}
+.left h3{
+	color:  #fff;
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 26px;
+	font-weight: 700;
+}
+.left span{
+	color: #6958c2;
+}
+.right{
+	padding: 5px;
+	float: right;
+	margin-top: -30px;
+	margin-right: 150px;
+	border-radius: 5px;
+	font-weight: 500;
+}
+.right .dropdown-content{
+	text-decoration: none;
+	color: white;
+}
+/*.sair_btn{
+	padding: 5px;
+	background: red;
+	text-decoration: none;
+	float: right;
+	margin-top: -30px;
+	margin-right: 40px;
+	border-radius: 5px;
+	font-weight: 500;
+	color: white;
+	transition-property: background;
+
+}
+.sair_btn:hover{
+	background: #bbbbbb;
+}*/
+.sidebar{
+	position: fixed;
+	width: 250px;
+	height: 100%;
+	margin-top: 70px;
+	padding-top: 30px;
+	left: 0;
+	background: #eeeeee;
+	transition: 0.5s;
+	transition-property: left;
+	border-right: solid 2px black;
+
+
+}
+.sidebar .image{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: solid 2px black;
+}
+.sidebar h2{
+	color: #6958c2;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.sidebar a{
+	color: #000000;
+	display: block;
+	width: 100%;
+	line-height: 60px;
+	text-decoration: none;
+	padding-left: 40px;
+	box-sizing: border-box;
+	transition: 0.5s;
+	transition-property: background;
+}
+.sidebar a:hover{
+	background: rgba(172, 63, 235,0.6);
+	border-left: solid 7px black;
+
+
+}
+.sidebar ion-icon{
+	padding-right: 10px;
+
+}
+label #sidebar_btn{
+	z-index: 1;
+	position: fixed;
+	left: 250px;
+	color: white;
+	font-size: 25px;
+	margin: 3px 0;
+	cursor: pointer;
+	transition: 0.5s;
+	transition-property: color;
+
+}
+label #sidebar_btn:hover{
+	color: #bbbbbb;
+}
+#check:checked ~.sidebar{
+	left: -190px;
+}
+#check:checked ~.sidebar a span{
+	display: none;
+}
+#check:checked ~.sidebar a{
+	font-size: 20px;
+	margin-left: 170px;
+	width: 80px;
+}
+#check:checked ~.content{
+	margin-left: 50px;
+}
+
+#check{
+	display: none;
+}
+/* ----- Tela principal - informações */
+.content{
+	/*background: url(#) no-repeat;*/
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	padding-top: 150px;
+}
+.cont{
+	background: url("capa-portal.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	padding-top: 150px;
+
+
+}
+
+.content-interna{
+	display: flex;
+	float: right;
+	margin-right: 12px;
+	width: 80%;
+	min-height: 450px;
+
+}
+
+.col-1{
+	display: flex;
+	justify-content: left;
+	border: solid 1px black;
+	width: 65%;
+	margin-right:10px;
+	border-radius: 15px;
+
+}
+.col-2{
+	display: flex;
+	justify-content: left;
+	border: solid 1px black;
+	width: 35%;
+	margin-left:10px;
+	border-radius: 15px;
+	
+
+}
+.col-2 h2{
+	text-align: center;
+
+
+}
+ul{
+	list-style: none;
+	width: 100%;
+}
+.col{
+	border: solid 1px black;
+	display: inline;
+	width: 15%;
+	margin-top: 10px;
+	justify-items: center;  
+ }
+
+
+/* -----Criação do dropdown de perfil ----- */
+.user-name{
+	text-decoration: none;
+
+}
+.user-name p{
+	font-size: 14pt;
+	color: white;
+	
+}
+.user-name span{
+	font-size: 10pt;
+	color: #bbbbbb;
+	
+}
+
+.dropdown {
+  	position: relative;
+  	display: inline-block;
+
+}
+
+.dropdown-content {
+
+  	display: none;
+  	position: absolute;
+  	border-radius: 15px;
+  	background-color: #f9f9f9;
+  	min-width: 180px;
+ 	 padding: 16px;
+  	z-index: 1;
+}
+.drop{
+	color: black;
+
+  	padding-bottom: 20px;
+  	margin-bottom: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+
+  	display: block;
+}
+
+/*----- Criação do modal de perfil -----*/
+
+#modal {
+	display: none;
+}
+#modal.active {
+	position: fixed;
+  	width: 500px;
+ 	height: 300px;
+  	top: 12%;
+  	left: 30%;
+  	background: rgba(255,255,255,0.9);
+  	opacity:0;
+  	-webkit-transition: opacity 400ms ease-in;
+  	-moz-transition: opacity 400ms ease-in;
+  	transition: opacity 400ms ease-in;
+  	pointer-events: none;
+ 	 border-radius: 15px;
+
+}
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 15px 20px;
+  background: #fff;
+}
+.modal h2{
+	padding: 20px;
+	text-align: center;
+}
+.formulario-recuperacao .input{
+	font-family: 'Josefin-sans', sans-serif;
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	padding: 10px;
+	text-align: center;
+	border:2px solid #000000 ;
+	padding: 8px 10px;
+	width: 300px;
+	outline: none; /*sumir com a borda de click estabelecida do sistema*/
+	color: black;
+	border-radius: 25px;
+	transition: 0.30s;
+}
+.formulario-recuperacao .input:focus{
+	width: 350px;
+	border-color: rgb(172, 63, 235);
+}
+.fechar {
+  position: absolute;
+  width: 30px;
+  right: -15px;
+  top: -20px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 5px;
+  background: #ff4545;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #8d0000;
+}
+
+/*tabela dados*/
+
+#customers {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #6859c2;
+  color: white;
+}

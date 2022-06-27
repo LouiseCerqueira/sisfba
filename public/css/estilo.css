@@ -1,0 +1,238 @@
+@charset="utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:wght@200;300&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+} 
+body{
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: #000000;
+}
+
+a{
+	text-decoration: none;
+	color: black; 
+}
+a:hover{
+	color: rgba(172, 63, 235,0.9);
+}
+#div-centralizada{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 1);
+	box-shadow: 10px 5px 5px black;
+	text-align: center;
+}
+#capa-op{
+	width: 300px;
+
+}
+#div-centralizada h1{
+	text-align: center;
+}
+#div-centralizada a{
+	text-decoration: none;
+	color: black;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	padding: 10px;
+	text-align: center;
+	border:2px solid #000000 ;
+	padding: 8px 10px;
+	width: 250px;
+	outline: none; /*sumir com a borda de click estabelecida do sistema*/
+	color: black;
+	border-radius: 25px;
+	transition: 0.30s;
+}
+#div-centralizada a:hover{
+	color: rgba(172, 63, 235,0.9);
+}
+
+#div-externa{
+	position: absolute;
+	width: 450px;
+	height: 550px;
+	background-color: rgba(255, 255, 255, 0.9);
+	top: 10%;
+	left: 15%;
+	border-radius: 15px;
+	box-shadow: 10px 5px 5px black;
+
+}
+#capa{
+	margin: auto;
+	position: relative;
+	width: 420px;
+	top: 8%;
+}
+
+
+.formulario{
+	width: 300px;
+	height: 300px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 69%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255);
+	text-align: center;
+	border-radius: 15px;
+	box-shadow: 10px 5px 5px black;
+}
+.formulario h1{
+	color: rgba(0, 0, 0, 1.0);
+	letter-spacing: 4px;
+}
+.formulario .input{
+	font-family: 'Josefin-sans', sans-serif;
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	padding: 10px;
+	
+	border:2px solid #000000 ;
+	padding: 8px 10px;
+	width: 220px;
+	outline: none; /*sumir com a borda de click estabelecida do sistema*/
+	color: black;
+	border-radius: 25px;
+	transition: 0.30s;
+}
+.formulario .input:focus{
+	width: 260px;
+	border-color: rgb(172, 63, 235);
+}
+::placeholder{
+	color: rgba(172, 63, 235,0.6);
+}
+p {
+	padding: 8px;
+}
+.botao{
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border:2px solid #000000;
+	padding: 8px 2px;
+	width: 220px;
+	outline: none;
+	color: #000000;
+	border-radius: 25px;
+	transition: 0.30s;
+	cursor: pointer;
+}
+.botao:hover{
+	background-color: rgb(172, 63, 235);
+}
+.div-centro{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255);
+	text-align: center;
+	box-shadow: 10px 5px 5px black;
+}
+.div-centro .formulario-cad .input{
+	font-family: 'Josefin-sans', sans-serif;
+	border:0;
+	background: none;
+	display: block;
+	margin: 10px auto;
+	
+	border:2px solid #000000 ;
+	padding: 8px 10px;
+	width: 400px;
+	outline: none; /*sumir com a borda de click estabelecida do sistema*/
+	color: black;
+	border-radius: 25px;
+	transition: 0.30s;
+
+}
+.div-centro .formulario-cad {
+	top: 40%;
+	left: 69%;
+	text-align: center;
+	}
+.div-centro .formulario-cad h1{
+	padding-bottom: 30px;
+}
+#capa-cadastro{
+	position: relative;
+	width: 250px;
+	margin: auto;
+
+}
+
+.modal {
+  position: fixed;
+  width: 500px;
+  height: 300px;
+  top: 12%;
+  left: 30%;
+  background: rgba(255,255,255,0.9);
+   opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+  border-radius: 15px;
+}
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 15px 20px;
+  background: #fff;
+}
+.modal h2{
+	padding: 20px;
+	text-align: center;
+}
+.formulario-recuperacao .input{
+	font-family: 'Josefin-sans', sans-serif;
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	padding: 10px;
+	text-align: center;
+	border:2px solid #000000 ;
+	padding: 8px 10px;
+	width: 300px;
+	outline: none; /*sumir com a borda de click estabelecida do sistema*/
+	color: black;
+	border-radius: 25px;
+	transition: 0.30s;
+}
+.formulario-recuperacao .input:focus{
+	width: 350px;
+	border-color: rgb(172, 63, 235);
+}
+.fechar {
+  position: absolute;
+  width: 30px;
+  right: -15px;
+  top: -20px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 5px;
+  background: #ff4545;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #8d0000;
+}
+.text-danger{
+	color: red;
+}

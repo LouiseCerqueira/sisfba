@@ -1,0 +1,35 @@
+
+	<div>
+		<div id="div-externa">
+			<img src="imagens/capa-login.png" id="capa">
+		</div>
+		<div id ="login">
+			<form class="formulario" method="POST" action="painel">
+				<h1>Login</h1>
+				<input class="input" type="text" name="email" placeholder="Usuário">
+				<input class="input" type="password" name="senha" placeholder="Senha">
+				<input class="botao" type="submit" name="botao" value="Login">
+
+				<p><input type="checkbox" name="ContConect" id="check"><scan>&nbsp; Continuar conectado</scan></p>
+				<p class="opc"><a href="#modalRecuperar"> Esqueci minha senha</a></p>
+
+				<?php if($this->view->login == 'erro') {?> 
+				<p><span class="text-danger">*E-mail e ou senha inválidos(s)</span></p>
+				<?php } ?>
+
+
+
+			</form>
+		</div>
+	</div>
+
+
+
+<div id="modalRecuperar" class="modal">
+  <a href="#login" title="Fechar" class="fechar">x</a>
+  <form class="formulario-recuperacao">
+  	<h2>Recuperar senha</h2>
+		<input class="input" type="text" name="usuario" placeholder="Email Registrado">
+		<input class="botao" type="submit" name="botao" value="Recuperar">
+	</form>
+</div>
